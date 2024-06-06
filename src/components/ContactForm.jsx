@@ -2,7 +2,7 @@ import { Component } from "react";
 import PropTypes from "prop-types";
 import { nanoid } from "nanoid";
 
-export default class Formula extends Component {
+export default class ContactForm extends Component {
   static propTypes = {
     options: PropTypes.shape({
       nameHandler: PropTypes.func,
@@ -40,7 +40,7 @@ export default class Formula extends Component {
             id={this.phoneId}
             type="tel"
             name="number"
-            pattern="^\+?[0-9 ()\-]+$"
+            pattern="^\+?[0-9\(\) \-]+$"
             title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
             required
             value={this.props.number}

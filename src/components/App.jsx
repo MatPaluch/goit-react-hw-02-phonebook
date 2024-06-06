@@ -32,8 +32,9 @@ export default class App extends Component {
 
   buttonAddContact = (ev) => {
     ev.preventDefault();
-    if (this.state.contacts.find((obj) => obj.name.includes(this.state.name))) {
-      alert("Rosie Simpson  is already in contacts");
+    console.log(this.state.name);
+    if (this.state.contacts.find((obj) => obj.name === this.state.name)) {
+      alert(this.state.name + " is already in contacts");
     } else {
       this.setState((prevState) => ({
         contacts: [
